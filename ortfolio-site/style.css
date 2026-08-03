@@ -1,0 +1,24 @@
+p{
+    line-height:1.5;
+}
+#main-heading{
+    text-decoration:underline;
+    color:green;
+}
+.highlight{
+    color:#e74c3c;
+    font-weight:bold;
+    font-size:1.2em;
+}
+h2{
+    color:blue;
+}
+main{
+    max-width:800px;
+    width:90%;
+    margin:0 auto;
+    padding:20px;
+}
+header{
+    min-height:15vh;
+}
