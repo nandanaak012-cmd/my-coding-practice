@@ -22,3 +22,26 @@ main{
 header{
     min-height:15vh;
 }
+nav{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+}
+nav a{
+    text-decoration:none;
+    color:#2c3e50;
+    font-weight:bold
+}
+.project-cards{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+.card{
+    background-color:white;
+    border-radius:8px ;
+    padding:20px;
+    box-shadow:0 2px 4px rgba(0,0,0,0.1);
+    flex:1;
+    min-width:250px;
+}
