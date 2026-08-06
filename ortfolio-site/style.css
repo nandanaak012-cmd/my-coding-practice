@@ -1,18 +1,48 @@
+:root{
+    --color-primary:#2c3e50;
+    --color-bg:#f4f4f4;
+    --color-accent:#e74c3c;
+    --color-text:#333;
+    --color-white:#ffffff;
+    --color-light-gray:#f9f9f9;
+    --spacing-sm:10px;
+    --spacing-md:20px;
+    --spacing-lg:40px;
+    --radius:8px;
+    --transition-speed: 0.3s;
+}
+body{
+    padding:0 ;
+    background-color:var(--color-bg);
+    color:var(--color-text);
+    margin:0 ;
+    font-family:Arial, sans-serif;
+}
+header{
+    padding:var(--spacing-md);
+    background-color:var(--color-primary);
+    min-height:15vh ;
+    text-align:center;
+    color:var(--color-white);
+}
+h2 {
+    border-bottom:2px solid var(--color-primary);
+    padding-bottom:5px;
+    color:var(--color-primary);
+}
 p{
     line-height:1.5;
 }
 #main-heading{
     text-decoration:underline;
-    color:green;
+    color:rgb(87, 139, 87);
 }
 .highlight{
-    color:#e74c3c;
+    color:var(--color-accent);
     font-weight:bold;
     font-size:1.2em;
 }
-h2{
-    color:blue;
-}
+
 main{
     max-width:800px;
     width:90%;
@@ -29,8 +59,8 @@ nav{
 }
 nav a{
     text-decoration:none;
-    color:#2c3e50;
-    font-weight:bold
+    color:var(--color-primary);
+    font-weight:bold;
 }
 .project-cards{
     display:flex;
@@ -38,8 +68,8 @@ nav a{
     flex-wrap:wrap;
 }
 .card{
-    background-color:white;
-    border-radius:8px ;
+    background-color:var(--color-white);
+    border-radius:var(--radius);
     padding:20px;
     box-shadow:0 2px 4px rgba(0,0,0,0.1);
     flex:1;
@@ -50,12 +80,12 @@ nav a{
     grid-template-columns:repeat(3,1fr);
     gap:15px;
 }
-.gallery img{
+.gallery__item {
+    border-radius:var(--radius);
     width:100%;
-    border-radius:8px;
     display:block;
 }
-.gallery .featured{
+.gallery__item--featured{
     grid-column:span 2;
     grid-row:span 2;
 }
@@ -70,7 +100,7 @@ nav a{
     .gallery{
         grid-template-columns:1fr;
     }
-    .gallery .featured{
+    .gallery__item--featured{
         grid-column:span 1;
         grid-row:span 1;
     }
@@ -82,19 +112,19 @@ nav a{
     .gallery{
         grid-template-columns:repeat(2,1fr);
     }
-    .gallery .featured{
+    .gallery__item--featured{
         grid-column:span 2;
         grid-row:span 1;
     }
 }
 nav a{
     border-radius:4px ;
-    transition:background-color 0.3s ease, color 0.3s ease;
+    transition:background-color var(--transition-speed) ease, color var(--transition-speed) ease;
     padding:5px 10px ;
 }
 nav a:hover{
-    background-color:#2c3e50;
-    color:white;
+    background-color:var(--color-primary);
+    color:var(--color-white);
 }
 .card{
     transition:transform 0.2s ease,box-shadow 0.2s ease;
@@ -106,9 +136,9 @@ nav a:hover{
 input:focus,
 textarea:focus,
 button:focus {
-    outline: 2px solid #2c3e50;
+    outline: 2px solid var(--color-primary);
     outline-offset: 2px;
 }
 .project-cards .card:nth-child(even){
-    background-color:#f9f9f9;
+    background-color:var(--color-light-gray);
 }
